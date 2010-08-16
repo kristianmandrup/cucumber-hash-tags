@@ -1,6 +1,22 @@
-= cucumber-hash-tags
+# Cucumber hash tags
 
-Description goes here.
+Adds hash tags support to Gherkin and Cucumber through monkeypatching. 
+
+## Cucumber monkey patch
+
+*tags.rb* class *Cucumber::Ast::Tags*
+
+## Gherkin monkey patch
+
+*tags_expression.rb* class *Gherkin::TagExpression*
+
+## Usage
+
+Load the 'cucumber-hash-tags' library after loading cucumber to ensure monkey patch takes effect overriding the strategic classes 
+with new and improved tags functionality.
+
+require 'cucumber'
+require 'cucumber-hash-tags'
 
 == Note on Patches/Pull Requests
  
